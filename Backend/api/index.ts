@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import  Jwt  from "jsonwebtoken";
 import { ContentModel, LinkModel, UserModel } from "./db";
 import { JWT_PASSWORD } from "./config";
-import { userMiddleware } from "./middleware";
+import { userMiddleware } from "../api/middleware";
 import { random } from "./utils";
 import cors from "cors";
 import dotenv from 'dotenv';
