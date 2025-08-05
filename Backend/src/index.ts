@@ -1,9 +1,8 @@
 import express from "express"
-import mongoose from "mongoose";
 import  Jwt  from "jsonwebtoken";
 import { ContentModel, LinkModel, UserModel } from "./db";
 import { JWT_PASSWORD } from "./config";
-import { userMiddleware } from "../api/middleware";
+import { userMiddleware } from "./middleware";
 import { random } from "./utils";
 import cors from "cors";
 import dotenv from 'dotenv';
@@ -171,5 +170,4 @@ app.get("/api/v1/brain/:shareLink",userMiddleware, async(req,res)=>{
     })
 })
 
-// app.listen(3000);
-module.exports = app;
+app.listen(3000);

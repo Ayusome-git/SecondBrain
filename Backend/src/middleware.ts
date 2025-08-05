@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import  Jwt  from "jsonwebtoken";
-import { JWT_PASSWORD } from "../api/config";
+import { JWT_PASSWORD } from "./config";
 
 export const userMiddleware = (req:Request,res:Response,next:NextFunction)=>{
     const header= req.headers["authorization"];
